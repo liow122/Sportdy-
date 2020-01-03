@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/gameFragment">
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.sportdy.Game.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.sportdy.Chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/friendFragment"
+        android:name="com.example.sportdy.Friend.FriendFragment"
+        android:label="fragment_friend"
+        tools:layout="@layout/fragment_friend" />
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="com.example.sportdy.Community.CommunityFragment"
+        android:label="fragment_community"
+        tools:layout="@layout/fragment_community" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.sportdy.Settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.example.sportdy.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.example.sportdy.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+</navigation>
