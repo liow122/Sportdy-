@@ -3,12 +3,21 @@ package com.example.sportdy.Game
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProviders
 
-class GameFragmentAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager) {
+class GameFragmentAdapter(fragmentManager: FragmentManager, gameViewModel: GameViewModel) : FragmentPagerAdapter(fragmentManager) {
+
+
+
     override fun getItem(position: Int): Fragment {
+
         val fragment: Fragment = when(position) {
-            0 -> MyGameFragment()
-            1 -> FindGameFragment()
+            0 -> FindGameFragment()
+            1 -> MyGameFragment()
             2 -> HistoryFragment()
             else -> MyGameFragment()
         }
@@ -19,12 +28,11 @@ class GameFragmentAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapt
 
     override fun getPageTitle(position: Int): CharSequence? {
         return when (position) {
-            0 -> "My Game"
-            1 -> "Find Game"
+            0 -> "Find Game"
+            1 -> "My Game"
             2 -> "History"
             else -> "My Game"
         }
     }
-
 }
 
