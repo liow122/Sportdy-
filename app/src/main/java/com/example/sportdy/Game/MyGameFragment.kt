@@ -15,9 +15,6 @@ import com.example.sportdy.R
  */
 class MyGameFragment : Fragment() {
 
-    private lateinit var myGameFragment: MyGameFragment
-    private lateinit var viewPager: ViewPager2
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

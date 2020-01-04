@@ -14,24 +14,26 @@ class GameViewModel: ViewModel() {
     val record: LiveData<Boolean> get() = _record
 
     init {
-        Log.i("GameViewModel", "Game View Model Created")
         _index.value = 0
         _record.value = false
+        Log.i("GameViewModel", "Game View Model Created ${_index.value.toString() + ' ' + _record.value }")
     }
 
     fun onSwipe(index: Int) {
         _index.value = index
         _record.value = false
+        Log.i("GameViewModel", "Game View Model Swipe ${_index.value.toString() + ' ' + _record.value }")
     }
 
-    fun onRecord(index: Int) {
-        _index.value = index
-        _record.value = false
-    }
-
-    fun onFlush():Int? {
+    fun onRecord() {
         _record.value = true
-        return _index.value
+        Log.i("GameViewModel", "Game View Model Record ${_index.value.toString() + ' ' + _record.value }")
+    }
+
+    fun onFlush():Int {
+        _record.value = false
+        return _index.value!!
+        Log.i("GameViewModel", "Game View Model Flush ${_index.value.toString() + ' ' + _record.value }")
     }
 
 }

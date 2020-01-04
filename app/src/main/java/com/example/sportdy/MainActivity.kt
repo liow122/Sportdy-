@@ -7,10 +7,12 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.ViewModelProviders
 import com.example.sportdy.Chat.ChatFragment
 import com.example.sportdy.Community.CommunityFragment
 import com.example.sportdy.Friend.FriendFragment
 import com.example.sportdy.Game.GameFragment
+import com.example.sportdy.Game.GameViewModel
 import com.example.sportdy.Settings.SettingsFragment
 import com.example.sportdy.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
@@ -86,6 +88,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             else ->
                 GameFragment()
         }
+
         supportFragmentManager.beginTransaction().replace(R.id.mainHostFragment, fragment).commit()
         drawerLayout.closeDrawer(GravityCompat.START)
         return true

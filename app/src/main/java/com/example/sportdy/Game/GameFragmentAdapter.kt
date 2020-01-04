@@ -9,17 +9,14 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProviders
 
-class GameFragmentAdapter(fragmentManager: FragmentManager, gameViewModel: GameViewModel) : FragmentPagerAdapter(fragmentManager) {
-
-
+class GameFragmentAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager) {
 
     override fun getItem(position: Int): Fragment {
-
         val fragment: Fragment = when(position) {
             0 -> FindGameFragment()
             1 -> MyGameFragment()
             2 -> HistoryFragment()
-            else -> MyGameFragment()
+            else -> FindGameFragment()
         }
         return fragment
     }
