@@ -25,4 +25,18 @@
     <string name="tktiong">TkTioNG</string>
     <string name="acc_img">Account Image</string>
 
+    <string name="host_prompt">Host A Game</string>
+    <array name="sports">
+        <item>Badminton</item>
+        <item>Basketball</item>
+        <item>Baseball</item>
+        <item>Hockey</item>
+        <item>Football</item>
+    </array>
+    <string name="date">Date : </string>
+    <string name="time">Time : </string>
+    <string name="venue">Venue : </string>
+    <string name="description">Description : </string>
+    <string name="post">Post</string>
+
 </resources>
